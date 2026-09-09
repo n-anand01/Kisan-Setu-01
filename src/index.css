@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    color: #163326;
+    background-color: #F3F8F4;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-6 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-brand-dark hover:shadow-md active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-brand/30 bg-white px-6 py-3 text-sm font-semibold text-brand transition-all duration-200 hover:border-brand hover:bg-brand-subtle active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium text-ink-soft transition-colors duration-200 hover:text-brand;
+  }
+  .card {
+    @apply rounded-2xl border border-black/5 bg-white p-6 shadow-sm transition-all duration-200 hover:shadow-md;
+  }
+  .label-tag {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-subtle px-3 py-1 text-xs font-semibold uppercase tracking-wider text-brand;
+  }
+}
